@@ -1,0 +1,24 @@
+name: 'fesbal-backend deploy'
+description: 'fesbal-backend deploy'
+inputs:
+  access-key: # AWS Account access key
+    description: 'The AWS account access key'
+    required: true
+  secret-key: # AWS account secret key
+    description: 'The AWS account secret key'
+    required: true
+  region: # AWS default region
+    description: 'The AWS default region'
+    required: true
+  boost-env: # Boost environment to deploy
+    description: 'Boot environment to deploy'
+    required: true
+outputs:
+  output: # test
+    description: 'The deploy result'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.access-key }}
+    - ${{ inputs.secret-key }}
