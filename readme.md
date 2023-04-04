@@ -12,11 +12,11 @@ This actions deploys your branch to the server.
 
 **Requires**  The AWS account secret key to the server.
 
-### `region``
+### `region`
 
 **Required** The AWS default region of the server.
 
-### `boost-env``
+### `boost-env`
 
 **Required** The environment to deploy to.
 
